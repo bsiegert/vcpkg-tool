@@ -1,7 +1,10 @@
 [CmdletBinding()]
 Param()
 
-[String[]]$fileList = Get-Content -LiteralPath $Env:XLocFileList
+"Using XLocFileList: $Env:XLocFileList" | Out-Host
+$fileList = Get-Content -LiteralPath $Env:XLocFileList
+"File list: ($($fileList -join ', '))" | Out-Host
+
 $fileList | % {
     $fileName = $_
     "Reading localization file: $fileName" | Out-Host
