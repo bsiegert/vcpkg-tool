@@ -1,18 +1,20 @@
 [CmdletBinding()]
 Param()
 
-"Using XLocFileList: $Env:XLocFileList" | Out-Host
+Write-Warning "Using XLocFileList: $Env:XLocFileList"
 $fileList = Get-Content -LiteralPath $Env:XLocFileList
-"File list: ($($fileList -join ', '))" | Out-Host
+Write-Warning "File list: ($($fileList -join ', '))"
 
 $fileList | % {
     $fileName = $_
-    "Reading localization file: $fileName" | Out-Host
+    Write-Warning "Reading localization file: $fileName"
     $fileContents = Get-Content $fileName -Raw # removes the BOM
     $fileContents += "`n" # add a trailing newline
-    "Reading localization file: $fileName" | Out-Host
+    Write-Warning "Reading localization file: $fileName"
     $fileContents | Out-File `
         -FilePath $fileName `
         -Encoding UTF8NoBOM `
         -NoNewline
 }
+
+throw "hey does this even get run?"
