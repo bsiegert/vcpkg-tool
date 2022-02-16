@@ -5,6 +5,7 @@
   "AwsFailedToDownload": "aws failed to download with exit code: {value}\n{output}",
   "AwsRestoredPackages": "Restored {value} packages from AWS servers in {elapsed}s",
   "AwsUploadedPackages": "Uploaded binaries to {value} AWS servers",
+  "BothOutputCommentsSpecified": "error: cannot specify both --no-output-comments and --output-comments.",
   "EmptyLicenseExpression": "SPDX license expression was empty.",
   "ErrorIndividualPackagesUnsupported": "Error: In manifest mode, `vcpkg install` does not support individual package arguments.\nTo install additional packages, edit vcpkg.json and then run `vcpkg install` without any package arguments.",
   "ErrorInvalidClassicModeOption": "Error: The option {value} is not supported in classic mode and no manifest was found.",
@@ -12,11 +13,8 @@
   "ErrorMissingVcpkgRoot": "Error: Could not detect vcpkg-root. If you are trying to use a copy of vcpkg that you've built, you must define the VCPKG_ROOT environment variable to point to a cloned copy of {url}.",
   "ErrorNoVSInstance": "Error: in triplet {triplet}: Unable to find a valid Visual Studio instance",
   "ErrorNoVSInstanceAt": "     at \"{path}\"",
-  "_ErrorNoVSInstanceAt.comment": "Printed after ErrorNoVSInstance on a separate line",
   "ErrorNoVSInstanceFullVersion": "    with toolset version prefix {version}",
-  "_ErrorNoVSInstanceFullVersion.comment": "Printed after ErrorNoVSInstance on a separate line",
   "ErrorNoVSInstanceVersion": "    with toolset version {version}",
-  "_ErrorNoVSInstanceVersion.comment": "Printed after ErrorNoVSInstance on a separate line",
   "ErrorRequireBaseline": "Error: this vcpkg instance requires a manifest with a specified baseline in order to interact with ports. Please add 'builtin-baseline' to the manifest or add a 'vcpkg-configuration.json' that redefines the default registry.\n",
   "ErrorRequirePackagesList": "Error: `vcpkg install` requires a list of packages to install in classic mode.",
   "ErrorRequirePackagesToInstall": "Error: No packages were listed for installation and no manifest was found.",
@@ -25,7 +23,6 @@
   "FormattedParseError": "error: {value}",
   "FormattedParseMessageExpression": "    on expression: {value}",
   "FormattedParseMessageLocation": "{path}:{row}:{column}: ",
-  "_FormattedParseMessageLocation.comment": "{LOCKED}",
   "FormattedParseWarning": "warning: {value}",
   "IllegalFeatures": "Error: List of features is not allowed in this contect",
   "IllegalPlatformSpec": "Error: Platform qualifier is not allowed in this context",
@@ -60,8 +57,6 @@
   "VcpkgDisallowedClassicMode": "Error: Could not locate a manifest (vcpkg.json) above the current working directory.\nThis vcpkg distribution does not have a classic mode instance.",
   "VcpkgHasCrashed": "vcpkg.exe has crashed.\nPlease send an email to:\n    {email}\ncontaining a brief summary of what you were trying to do and the following data blob:\n\nVersion={version}\nEXCEPTION='{error}'\nCMD=",
   "VcpkgHasCrashedArgument": "{value}|",
-  "_VcpkgHasCrashedArgument.comment": "{LOCKED}",
   "VcpkgInvalidCommand": "invalid command: {value}",
   "VcpkgSendMetricsButDisabled": "Warning: passed --sendmetrics, but metrics are disabled."
 }
-
